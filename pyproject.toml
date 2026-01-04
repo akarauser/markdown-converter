@@ -1,0 +1,28 @@
+[project]
+name = "markdown-converter"
+version = "0.1.0"
+description = "Script Conversion"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9.0.1",]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # Pyflakes
+    "I", # isort
+    "UP", # pyupgrade
+]
+
+ignore = [
+    "E501", # line-too-long
+]
